@@ -1,5 +1,6 @@
 import unittest
 import scipy.stats as st
+import scipy.special as sp
 from main import *
 
 class UnitTests(unittest.TestCase) :
