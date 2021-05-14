@@ -16,7 +16,7 @@ x, e, var, bmin, bmax, isi  = [], [], [], [], [], []
 for i in range(nparam+1) :
     x.append(i)
     e.append(nparam*prob)
-    var.append(npara*prob*(1-prob))
+    var.append(nparam*prob*(1-prob))
     bmin.append(0)
     bmax.append(nparam)
     isi.append(True)
