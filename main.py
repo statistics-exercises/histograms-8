@@ -22,8 +22,3 @@ for i in range(noutcomes) :
   # each outcome comes up goes here.  You should also set the elements
   # of the list sample_space to the various values in the sample space for this particular random variable so that the plot appears correctly.
   
-# These command will plot your histogram
-plt.bar( sample_space, counts, width=0.1 )
-plt.xlabel("Random variable value")
-plt.ylabel("Fraction of occurances")
-plt.savefig("myhistogram.png")
