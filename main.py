@@ -12,6 +12,7 @@ def binomial(n, p) :
 
 # This variable is the number of random variables we are going to generate
 nsamples=200
+
 nparam, prob = 8, 0.3
 noutcomes = nparam + 1 
 counts = np.zeros(noutcomes)

@@ -10,16 +10,18 @@ except:
 from AutoFeedback.plotclass import line
 from AutoFeedback.randomclass import randomvar
 import unittest
+from scipy.stats import binom
 from main import *
 
 x, e, var, bmin, bmax, isi  = [], [], [], [], [], []
 for i in range(nparam+1) :
     x.append(i)
-    e.append(nparam*prob)
-    var.append(nparam*prob*(1-prob))
+    pval = binom.pmf(i, nparam, prob )
+    e.append(pval)
+    var.append(pval/nsamples)
     bmin.append(0)
-    bmax.append(nparam)
-    isi.append(True)
+    bmax.append(1)
+    isi.append(False)
 
 var = randomvar( e, variance=var, vmin=bmin, vmax=bmax, isinteger=isi ) 
 line1=line( x, var )
