@@ -5,11 +5,13 @@ import numpy as np
 
 def binomial(n, p) :
   # Your code to generate a binomial random variable goes here
-  
+
+# This variable is the number of random variables we are going to generate
+nsamples=200 
 nparam, prob = 8, 0.3
 noutcomes = 
 counts = np.zeros(noutcomes)
-for i in range(200) : 
+for i in range(nsamples) : 
   # Your code to generate multiple binomial variables using the function
   # called binomial above and to count how often each outcome comes
   # up goes here.  
