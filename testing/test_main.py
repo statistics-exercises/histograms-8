@@ -18,7 +18,7 @@ for i in range(nparam+1) :
     x.append(i)
     pval = binom.pmf(i, nparam, prob )
     e.append(pval)
-    var.append(pval/nsamples)
+    var.append(pval*(1-pval)/nsamples)
     bmin.append(0)
     bmax.append(1)
     isi.append(False)
